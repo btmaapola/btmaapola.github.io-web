@@ -1,0 +1,463 @@
+/* Master styles */
+body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: whitesmoke;
+    font-family: 'Abhaya Libre', serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+    display: flex;
+}
+/* Nav styles */
+.nav-wrapper{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    background: teal;
+} 
+.nav-wrapper.sticky{
+    padding: 15px 0;
+    background: rgba(243, 240, 237, 0.933);
+}
+.nav-wrapper .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.left-side .brand img{
+    width: auto;
+    height: 30px;
+}
+
+.right-side{
+    list-style: none;
+    display: flex;
+    color: white;
+    font-weight: 600;
+}
+.nav-wrapper > .right-side > div {
+    margin-right: 30px;
+    font-size: 0.9em;
+}
+.nav-link-wrapper{
+    height: 20px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+    margin-left: 20px;
+}
+.nav-link-wrapper a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s;
+    margin-left: 20px;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	text-decoration: none;
+}
+.nav-link-wrapper:hover{
+    border-bottom: 1px solid rgba(4, 151, 157, 0.933);
+}
+.nav-link-wrapper a:hover{
+    color: rgba(4, 151, 157, 0.933);
+}
+.active-nav-link{
+    border-bottom: 1px solid rgb(146, 255, 235);
+}
+
+.active-nav-link a.active{
+    color: rgb(146, 255, 235)!important;
+}
+
+
+/*Section */
+#fullpage {
+    height: 100vh;
+    overflow: hidden;
+}
+#fullpage section{
+    height: 100vh;
+}
+
+#fullpage section:nth-child(1) {
+    background: whitesmoke;
+}
+
+
+/* Home styles */
+
+.home-image-wrapper{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: url(images/new.png) no-repeat;
+    background-size: cover;
+}
+.intro-text-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    text-align: center;
+    color: black;
+    font-family: 'Abhaya Libre', serif;
+}
+
+.intro-text-wrapper h1{
+    font-size: 58px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+.intro-text-wrapper h3{
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    margin: 0;
+    margin-bottom: 40px;
+}
+.ds{
+    margin: 20px;
+    display: block;
+    font-size: 25px;
+}
+.intro-text-wrapper a{
+    display: inline-block;
+    background: teal;
+    color: white;
+    font-size: 20px;
+    font-weight: 600px;
+    padding: 10px 24px;
+    margin-top: 20px;
+    border-radius: 2px;
+    border: 2px solid rgba(2, 114, 118, 0.933);
+    text-decoration: none;
+}
+
+
+/*About Webpage Styles*/
+#fullpage2 {
+    height: 100vh;
+    overflow: hidden;
+}
+#fullpage2 section{
+    height: 100vh;
+}
+
+#fullpage2 section:nth-child(1) {
+    background: smokewhite
+}
+.about-wrapper{
+    margin-right: 30px;
+    font-family: 'Abhaya Libre', serif;
+}
+.about-image-wrapper img {
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 7px;
+}
+
+.title{
+    color: black;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    top: 80px;
+}
+
+.title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 190px;
+    height: 3px;
+    background: teal;
+    transform: translateX(-50%);
+}
+
+.title::after{
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background:white;
+    transform: translateX(-50%);
+}
+.about-wrapper .title::after{
+    content: "who i am";
+    bottom: -12px;
+}
+.about-image-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about-image-wrapper .left{
+    width: 45%;
+}
+.about-image-wrapper .about-text-wrapper{
+    width: 55%;
+}
+.about-image-wrapper .about-text-wrapper .text{
+    color: rgba(7, 111, 114, 0.933);
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-image-wrapper .about-text-wrapper .text span{
+    color: crimson;
+}
+.about-image-wrapper .about-text-wrapper p{
+   text-align: justify; 
+   font-size: 20px;
+}
+
+.about-text-wrapper a{
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-size: 20px;
+    font-weight: 600px;
+    padding: 10px 24px;
+    margin-top: 20px;
+    border-radius: 2px;
+    border: 2px solid whitesmoke;
+    text-decoration: none;
+}
+
+/* Skills*/
+#fullpage3{
+    height: 130vh;
+    overflow: hidden;
+}
+#fullpage3 section{
+    height: 130vh;
+}
+#fullpage3 section:nth-child(1){
+    background: rgb(225, 224, 224);
+}
+
+.skills-wrapper .title::after{
+    content: "my abilities";
+    bottom: -12px;
+}
+.skills-content-wrapper{
+    margin-top: 130px;
+    margin-bottom: 10px;
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.skills-content-wrapper .text{
+    color: rgba(7, 111, 114, 0.933);
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skills-wrapper .soft-skills .text{
+    color: rgba(7, 111, 114, 0.933);
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.skills-wrapper .soft-skills p{
+    width: 70%;
+    margin-left: 15%;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+.hard-skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.skill-box{
+    padding: 0px;
+    color: white;
+    cursor: pointer;
+}
+.skill span{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-bottom: 15px;
+    color:teal
+}
+.skill img{
+    width: 120px;
+    height: 120px;
+    position: relative;
+    border-radius: 13px;
+    background-color: white;
+    display:fixed;
+    justify-content: center;
+    align-items:center;
+}
+
+.skill-box p{
+    color: teal;
+    margin: 20px;
+}
+
+/*Portfolio*/
+
+#fullpage4{
+    height: 160vh;
+    overflow: hidden;
+}
+#fullpage4 section{
+    height: 160vh;
+}
+#fullpage4 section:nth-child(1){
+    background: whitesmoke;
+}
+
+.portfolio-wrapper .title::after{
+    content: "my projects";
+    bottom: -12px;
+}
+
+.portfolio-content-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.portfolio-box{
+    padding: 0px;
+    cursor: pointer;
+}
+
+.project-box span{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 18px;
+    color:teal
+}
+.project-box {
+    margin-top: 70px;
+    margin-left: 50px;
+    background-color: transparent;
+    width: 330px;
+    height: 300px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+  /* This container is needed to position the front and back side */
+.project {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.project img{
+    width: 330px;
+    height: 300px;
+    position: relative;
+    /*border-radius: 13px;*/
+    background-color: white;
+    display:fixed;
+    justify-content: center;
+    align-items:center;
+}
+
+.project-box:hover .project{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+  
+/* Style the back side */
+.flip-card-back {
+    color: black;
+    transform: rotateY(180deg);
+    border-radius: 13px;
+    background-color: lightseagreen;
+    /*background-color: rgb(216, 255, 248);*/
+}
+
+.flip-card-back p{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.flip-card-back a{
+    background-color: transparent;
+    color: greenyellow;
+    font-size: large;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.flip-card-back a:hover{
+    color: red;
+    font-size: large;
+    font-weight: 600;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+/*Contacts*/
+#fullpage5{
+    height: 115vh;
+    overflow: hidden;
+}
+#fullpage5 section{
+    height: 115vh;
+    margin: 0px;
+    padding: 0px;
+}
+#fullpage5 section:nth-child(1){
+    background: whitesmoke;
+}
+
+.contact-wrapper .title::after{
+    content: "reach out";
+    bottom: -12px;
+}
